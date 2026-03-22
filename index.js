@@ -14,6 +14,9 @@ const razorpay = new Razorpay({
     key_secret: process.env.RAZORPAY_KEY_SECRET
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 // create order
 app.post("/create-order", async (req, res) => {
     const { amount } = req.body;
